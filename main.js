@@ -53,21 +53,21 @@ console.log(objt1["curso"]);
 let a = "2";
 let b = 2;
 
-// console.log('Doble igualdad',  a  == b);
+console.log('Doble igualdad',  a  == b);
 
-// console.log('Triple igualdad', a  === b);
+console.log('Triple igualdad', a  === b);
 
-// console.log('negacion', a !== b);
+console.log('negacion', a !== b);
 
 //& operadores matematicos
 
 let c = 34;
 let d = 4;
-// console.log( c + d);
-// console.log( c - d);
-// console.log( c ** d);
-// console.log( c % d);
-// console.log( c / d);
+console.log( c + d);
+console.log( c - d);
+console.log( c ** d);
+console.log( c % d);
+console.log( c / d);
 
 //^ Ciclos
 
@@ -76,40 +76,46 @@ let d = 4;
 //breack para terminar un ciclo
 
 // continue para saltear una iteracion
-// for (var i = 0; i < 8 ; i++){
-// 	console.log(i);
-// }
+for (var i = 0; i < 8 ; i++){
 
-// let num = 1;
+	console.log(i);
+if(i === 3){break;}
+}
 
-// while (num < 8) {
-// 	num++;
-// 	console.log(num);
-// }
+let num = 1;
 
-// let res;
-// do {
-// 	res = confirm("Esto es un ciclo?");
-// } while (res);
+while (num < 18) {
+	num++;
+	console.log(num);
+if(num === 5){
+	continue;}
+}
 
 
-// let switcher = 12;
 
-// switch (switcher) {
-// 	case 1:
-// 		console.log("primero");
-// 		break;
-// 	case 2:
-// 		console.log("segundo");
-// 		break;
+let res;
+do {
+	res = confirm("Esto es un ciclo?");
+} while (res);
 
-// 	case 3:
-// 		console.log("tercero");
-// 		break;
 
-// 	default:
-// 		console.error("No existe el valor");
-// }
+let switcher = 12;
+
+switch (switcher) {
+	case 1:
+		console.log("primero");
+		break;
+	case 2:
+		console.log("segundo");
+		break;
+
+	case 3:
+		console.log("tercero");
+		break;
+
+	default:
+		console.error("No existe el valor");
+}
 
 
 //^interactuando con objetos del documento
@@ -123,11 +129,28 @@ parr.innerText = 'Jovenes aprendiendo JavasCript'
 
 var primero = 22;
 
-
+// let se restringe al entorno, no puede salir de una funcion o un ciclo
 function letVariable (){
-   let seg = 2 ;
-  return' 11111'
+   if( true){
+	let numLet=  2
+   }
+  return numLet
 }
+
+
+// var es global, puedo acceder desde cualquier parte del archivo
+
+
+function varVariable (){
+	if( true){
+		var num2 =  2
+	   }
+	
+	return num2;
+
+}
+
+ 
 
 
 const ter = 33;
@@ -135,9 +158,11 @@ const ter = 33;
 // const es inmutable
 //console.log(ter = 2);
 
-console.log(letVariable())
 
 
+console.log('variable var', varVariable());
+
+console.log('variable let', letVariable())
 
 
 
